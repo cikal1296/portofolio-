@@ -6,6 +6,7 @@
     <title>portofolio_fazri</title>
     <style>
         body {
+          overflow: hidden;
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
@@ -152,7 +153,7 @@ h2{
     margin: 0; /* Hapus margin default untuk memastikan alignment yang benar */
 }
 
-.logoo img {
+.lgoo img {
   padding-top:25px ;
   padding-right:10px ;
     width: 30px;
@@ -168,14 +169,24 @@ hr{
 #text1{
   font-size: 15px;
 }
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
     </style>
 </head>
 <body>
+    <div id="particles-js"></div>
     <div class="content">
         <!-- Main content of the page goes here -->
         <div class="logoo">
         <p><i>fazri_intro<i></p>
-        <img src="logo.jpg">
+        <ig src="logo.jpg">
         </div>
     </div>
 <center><div class="one"><img src="pp.jpg">
@@ -196,10 +207,39 @@ hr{
             <li><a href="#home">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="#comment">Comment</a></li>
+            <li id="btn"><a href="#comment">Comment</a></li>
         </ul>
     </nav>
-    <script>
+      
+    
+
+<!-- scripts -->
+<script src="../particles.js"></script>
+<script src="js/app.js"></script>
+
+<!-- stats.js -->
+
+
+<script>
+  var count_particles, stats, update;
+  stats = new Stats;
+  stats.setMode(0);
+  stats.domElement.style.position = 'absolute';
+  stats.domElement.style.left = '0px';
+  stats.domElement.style.top = '0px';
+  document.body.appendChild(stats.domElement);
+  count_particles = document.querySelector('.js-count-particles');
+  update = function() {
+    stats.begin();
+    stats.end();
+    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+      count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+    }
+    requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+</script>
+<script>
       const texts1 = [
         "Haloooo",
         "Welcome to my gabut side",
@@ -235,6 +275,12 @@ hr{
         text2.style.color = getRandomColor();
       }
       setInterval(updateText, 2000);
+      //ini untuk button itu ga harus butten sih 
+        document.getElementById("btn").onclick = function() {
+            alert("maaf page ini masih dalam proses liris");
+        };
     </script>
+ 
+   
 </body>
 </html>
