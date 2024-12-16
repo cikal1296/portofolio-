@@ -266,12 +266,12 @@ a{color: white;
 </div>
 
       <nav  id="navbar" class="navbar">
-        <ul>
+                <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#comment">Comment</a></li>
-        </ul>
+             <li id="bun"><a href="about.html">About</a></li>
+            <li id="btn"><a href="#contact">Contact</a></li>
+            <li id="btn"><a href="#comment">Comment</a></li>
+                </ul>
     </nav>
     <script>
       let lastScrollTop = 0;
@@ -291,6 +291,14 @@ window.addEventListener('scroll', function() {
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Pastikan nilai scroll tidak negatif
 });
 
+document.getElementById("bun").onclick = function() {
+            alert("maaf page ini masih dalam tahap pengembangan");
+        };
+
+      document.getElementById("btn").onclick = function() {
+            alert("maaf page ini masih dalam proses liris");
+        };
+      
 
    AOS.init();
     </script>
