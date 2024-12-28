@@ -7,6 +7,7 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <style>
     body {
       
@@ -148,7 +149,7 @@
     placeholder="Masukkan comment Anda di sini..." 
     style="width:75%; height: 200px; padding: 10px; font-size: 16px; border: 2px solid green; border-radius: 5px; resize: none; background-color: ; color: #333; margin-top:px;"
   ></textarea></center>
-  <button>Kirim</button>
+  <button onclick="showAlert()">Kirim</button>
   <br>
   <div style="padding-top:180px;">
   <h2 class="h2"><i>common review :</i></h2>
@@ -255,6 +256,17 @@
             <li id="btn"><a href="anjay.html">Comment</a></li>
         </ul>
     </nav>
+  <script>
+    function showAlert() {
+      Swal.fire({
+        icon: 'success', // Ikon centang
+        title: 'Berhasil!',
+        text: 'Pesan berhasil terkirim!.',
+        confirmButtonText: 'OK',
+        confirmButtonColor: '#06D001', // Warna tombol OK
+      });
+    }
+  </script>
 <script>
   AOS.init();
 </script>
