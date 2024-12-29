@@ -273,6 +273,44 @@ a{color: white;
   color: white;
   
 }
+      .frame {
+  background-color: #2a2a40;
+  border: 1px solid cyan;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 255, 255, 1);
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+display: flex;
+  word-break: break-all;
+}
+.frame2 {
+  margin-top: 30px;
+  background-color: #2a2a40;
+  border: 1px solid red;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(255, 0, 0, 1);
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+display: flex;
+  word-break: break-all;
+}
+.frame p{
+  font-size:0.7em;
+}
+.frame2 p{
+  font-size:0.7em;
+}
+.frame img,.frame2 img{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+      footer{
+  width: 89vw; /* Lebar penuh layar */
+    position: relative; /* Jika ingin tetap dalam flow layout */
+    left: -40px; 
+      }
     </style>
   </head>
   <body>
@@ -344,6 +382,23 @@ a{color: white;
   </div>
 </div>
   <br>
+  <h2 style="color:white; padding-top:20px;"><i>framework</i> </h2>
+  <br>
+      <div class="frame">
+              <img src="react.png" style="width:50px; height:50px; border-radius:50%;">
+      <p style="color:white;"><b>React</b> adalah libray JavaScript yang digunakan untuk membangun user interface yang interaktif berbasis component. </p>
+
+    </div>
+      <div class="frame" style="box-shadow: 0 2px 4px rgba(0, 255, 0,1); border:1px solid #06D001; margin-top:30px;">
+              <img src="node.png" style="width:50px; height:50px; border-radius:50%;">
+      <p style="color:white;"><b>node.js</b> adalah libray JavaScript yang digunakan untuk membangun user interface yang interaktif berbasis component. </p>
+
+    </div>
+      <div class="frame2">
+              <img src="laravel.jpg" style="width:50px; height:50px; border-radius:50%;">
+      <p style="color:white;"><b>Laravel</b> merupakan framework PHP yang open-source dan berisi banyak modul dasar untuk mengoptimalkan kinerja. </p>
+
+    </div>
   <br>
   <br>
   <div data-aos="zoom-in-right" class="konten3"  >
@@ -369,10 +424,35 @@ a{color: white;
       <button class="button"><a href="https://cikal1296.github.io/raiden-Shogun/">See</a></button>
         </div>
   </div>
+  <footer style="height:120px; background-color: #2a2a40; padding: 20px; text-align: center; color: #fff; font-family: Arial, sans-serif; margin-bottom:0px; ">
+  <p style="margin: 0; padding: 5px;">Terima kasih telah mengunjungi kami!</p>
+  <div style="margin-top: 30px;">
+    <a href="https://instagram.com" style="margin: 0 10px; color: #fff; text-decoration: none;">
+      <svg style="width: 24px; height: 24px; vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+        <path fill="currentColor" d="M224,202.66A53.34,53.34,0,1,0,277.34,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,1,1-54-54A54,54,0,0,1,348.71,161.66ZM224,292.66A85.34,85.34,0,1,1,309.34,208,85.34,85.34,0,0,1,224,292.66ZM398.8,112A54.33,54.33,0,0,1,443,157.2V396a54.33,54.33,0,0,1-44.2,45.2H90A54.33,54.33,0,0,1,45.8,396V157.2A54.33,54.33,0,0,1,90,112H398.8M224,338.66A132.66,132.66,0,1,0,91.34,208,132.77,132.77,0,0,0,224,338.66ZM398.8,84H90A73.87,73.87,0,0,0,16,157.2V396A73.87,73.87,0,0,0,90,469.2H398.8A73.87,73.87,0,0,0,472,396V157.2A73.87,73.87,0,0,0,398.8,84Z"></path>
+      </svg>
+    </a>
+    <a href="https://facebook.com" style="margin: 0 10px; color: #fff; text-decoration: none;">
+      <svg style="width: 24px; height: 24px; vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+        <path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91V141.73c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S251.88 0 225.36 0c-73.22 0-121.48 44.38-121.48 124.72v70.62H22.89V288h81V512h100.2V288z"></path>
+      </svg>
+    </a>
+    <a href="https://github.com" style="margin: 0 10px; color: #fff; text-decoration: none;">
+      <svg style="width: 24px; height: 24px; vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+        <path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.8-4.9 3.8-2.8 0-5.6-1.7-5.6-3.9 0-2.1 2.3-3.8 5.6-3.8 2.5 0 4.9 1.7 4.9 3.9zm-31.3-3.7c-1.1 2.6 1.1 5.6 4.9 5.6 2.7 0 5.8-2.3 5.6-4.9-1.1-2.6-1.1-5.6-4.9-5.6-3.3.1-5.6 2.4-5.6 4.9zm44.1-3.1c-2.8.8-4.5 3.1-4.1 5.6 1.1 2.6 4.3 4.9 7.8 4.1 3.4-.9 5.4-3.4 4.8-5.9-1.1-2.5-4.3-4.8-7.8-3.8zM252 8C119 8 8 119.3 8 252.3c0 107.9 69.8 199.7 167.1 231.9 12.4 2.3 17-5.4 17-12 0-6-1-22-1-44.8-67.7 15-81.7-31.2-81.7-31.2-11.3-28.6-27.7-36.3-27.7-36.3-22.7-15.6 1.7-15.3 1.7-15.3 25.2 2 38.3 25.7 38.3 25.7 22.4 38.3 58.7 27.3 72.9 20.9 2.3-16.4 8.6-27.3 15.7-33.7-54.2-6-111.2-27.2-111.2-121 0-26.7 9.6-48.6 25.5-65.8-2.6-6-11.1-30.2 2.4-62.8 0 0 21-6.8 68.8 25.7 20-5.6 41.6-8.6 63-8.6s43 3 63 8.6c47.6-32.5 68.8-25.7 68.8-25.7 13.5 32.6 5 56.8 2.4 62.8 15.9 17.2 25.5 39.2 25.5 65.8 0 93.9-57 114.9-111.2 120.9 8.8 7.6 17.1 23.2 17.1 47.2 0 34-.3 61.3-.3 69.8 0 6.7 4.6 14.6 17.2 12 97.2-32.2 167-124 167-231.9C496 119.3 385 8 252 8z"></path>
+      </svg>
+    </a>
+    <a href="https://twitter.com" style="margin: 0 10px; color: #fff; text-decoration: none;">
+      <svg style="width: 24px; height: 24px; vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path fill="currentColor" d="M459.4 151.7c.3 2.8.3 5.6.3 8.5 0 87-66.2 187.3-187.3 187.3-37.2 0-71.8-10.9-100.8-29.4 5.3.6 10.4.8 15.9.8 30.9 0 59.3-10.5 81.9-28-28.8-.6-53.1-19.6-61.4-45.6 10.4 1.6 19.6 1.6 30-1.2-30.1-6.1-52.6-32.6-52.6-64.6v-.8c8.8 4.9 19.1 8 30 8.3-18-12-29.7-32.6-29.7-55.8 0-12.4 3.4-24 9.4-34.1 33.7 41.5 84.1 68.8 141 71.8-1.2-5-1.9-10.5-1.9-16 0-38.4 31.1-69.5 69.5-69.5 20 0 38.1 8.5 50.9 22.2 15.6-3 30.1-8.8 43.2-16.6-5.3 16.6-16.6 30.4-31.4 39.2 13.9-1.5 27.1-5.3 39.4-10.5-9.1 13.7-20.7 25.8-34 35.3z"></path>
+      </svg>
+    </a>
+  </div>
+</footer>
+<div style="height:40px;"></div>
 </div>
 
-<div style="margin-top:200px;">aw</div>
-      <nav  id="navbar" class="navbar">
+<nav  id="navbar" class="navbar">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li id="bun"><a href="about.html">About</a></li>
