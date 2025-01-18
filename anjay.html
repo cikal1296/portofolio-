@@ -149,7 +149,7 @@ textarea::placeholder{color: white;
  
 <center><textarea 
     placeholder="Masukkan comment Anda di sini..." 
-    style="color:white; width:75%; height: 200px; padding: 10px; font-size: 16px; border: 2px solid #06d001; border-radius: 5px; resize: none; background-color:#2a2a40 ; color: #333; margin-top:px;"
+    style="color:white; width:75%; height: 200px; padding: 10px; font-size: 16px; border: 2px solid #06d001; border-radius: 5px; resize: none; background-color:#2a2a40 ; color: white; margin-top:px;"
   ></textarea></center>
   <button onclick="showAlert()">Kirim</button>
   <br>
@@ -287,6 +287,48 @@ textarea::placeholder{color: white;
         </ul>
     </nav>
     <script>
+      const textarea = document.querySelector('textarea');
+  const button = document.querySelector('button');
+  const testimonialsContainer = document.querySelector('.testimonial-box').parentNode;
+
+  // Event listener untuk tombol "Kirim"
+  button.addEventListener('click', () => {
+    // Ambil teks dari textarea
+    const comment = textarea.value.trim();
+
+    // Validasi input kosong
+    if (comment === '') {
+      alert('Komentar tidak boleh kosong!');
+      return;
+    }
+
+    // Buat elemen testimonial baru
+    const newTestimonial = document.createElement('div');
+    newTestimonial.className = 'testimonial-box';
+    newTestimonial.innerHTML = `
+      <div class="stars">
+        ★ ★ ★ ★ ★
+      </div>
+      <p class="testimonial-text">${comment}</p>
+      <div class="author">
+        <img src="default.jpg" alt="Default User" class="author-photo">
+        <div class="author-info">
+          <h4>Anonymous</h4>
+          <p>Visitor</p>
+        </div>
+      </div>
+    `;
+
+    // Tambahkan testimonial baru ke dalam container
+    testimonialsContainer.appendChild(newTestimonial);
+
+    // Kosongkan textarea
+    textarea.value = '';
+
+    // Tampilkan animasi AOS untuk elemen baru
+    AOS.refresh();
+  });
+      
 function showAlert() {
       Swal.fire({
         icon: 'success', // Ikon centang
